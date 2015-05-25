@@ -1,6 +1,6 @@
 (function () {
     'use strict';
 
-    angular.module('ngFoursquareApp', ['ngResource', 'ngSanitize', 'ngRoute']);
+    angular.module('ngFoursquareApp', ['ngResource']);
 
 })();

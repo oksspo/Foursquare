@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('ngFoursquareApp')
-        .controller('MainCtrl', ['foursquareApiService', function($scope, foursquareApiService) {
+        .controller('MainCtrl', function($scope, foursquareApiService) {
             $scope.nearBy = 'Kharkiv';
 
         $scope.search = function () {
@@ -10,6 +10,7 @@
                 near: $scope.nearBy,
                 query: $scope.query
             });
+            console.log($scope.places);
         };
-    }])
+    })
 })();
