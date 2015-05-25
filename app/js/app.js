@@ -1,3 +1,6 @@
-/**
- * Created by Ksenua on 01.04.2015.
- */
+(function () {
+    'use strict';
+
+    angular.module('ngFoursquareApp', ['ngResource']);
+
+})();

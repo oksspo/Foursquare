@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/oksspo/Foursquare/issues"
   },
-  "homepage": "https://github.com/oksspo/Foursquare"
+  "homepage": "https://github.com/oksspo/Foursquare",
+  "devDependencies": {
+  }
 }
