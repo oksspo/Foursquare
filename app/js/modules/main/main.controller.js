@@ -10,7 +10,6 @@
                 near: $scope.nearBy,
                 query: $scope.query
             });
-            console.log($scope.places);
         };
     })
 })();

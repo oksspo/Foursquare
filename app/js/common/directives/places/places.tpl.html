@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-6">
+            <div class="input-group form-group">
+                <span class="input-group-addon" id="sizing-addon2">Filter:</span>
+                <input type="text" id="places-filter" class="form-control" ng-model="filterQuery" aria-describedby="sizing-addon2"/>
+            </div>
+        <ul class="places-list list-group">
+            <li ng-repeat="place in places | filter: filterPlaces" class="list-group-item"  ng-class="{ 'active': $index == selectedIndex }">
+                <place-card ng-model="place" ng-click="selectPlace($index)"></place-card>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-md-6">
+        <div><strong>{{ selectedPlace.name }}</strong></div>
+        <p>{{ selectedPlace.location.address }}</p>
+    </div>
+</div>

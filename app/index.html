@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="less/main.css" rel="stylesheet">
 
 </head>
 <body>
@@ -15,7 +16,10 @@
     <nav class="navbar navbar-default navbar-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Foursquare App</a>
+                <a class="navbar-brand" href="#">
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    Foursquare App
+                </a>
             </div>
         </div>
     </nav>
@@ -32,13 +36,7 @@
             </div>
         </form>
 
-        <div class="container result">
-            <ul>
-                <li ng-repeat="place in places">
-                    <span ng-bind = "place.name"></span>
-                </li>
-            </ul>
-        </div>
+       <places ng-model="places" ng-if="places.length"></places>
     </div>
 
 </div>
@@ -57,4 +55,7 @@
 <script src="js/config.js" type="text/javascript"></script>
 <script src="js/modules/main/main.controller.js" type="text/javascript"></script>
 <script src="js/common/services/foursquareApi.service.js" type="text/javascript"></script>
+
+<script src="js/common/directives/placeCard/placeCard.directive.js"></script>
+<script src="js/common/directives/places/places.directive.js"></script>
 </html>
