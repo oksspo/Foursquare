@@ -16,10 +16,8 @@
                     return item.name.toLowerCase().indexOf(scope.filterQuery.toLowerCase())>=0;
                 };
                 scope.selectPlace = function(index){
-                    console.log(scope.places[index]);
                     scope.selectedPlace = scope.places[index];
                     scope.selectedIndex = index;
-
                 }
             }
         };
