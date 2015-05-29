@@ -5,14 +5,15 @@
                 <input type="text" id="places-filter" class="form-control" ng-model="filterQuery" aria-describedby="sizing-addon2"/>
             </div>
         <ul class="places-list list-group">
-            <li ng-repeat="place in places | filter: filterPlaces" class="list-group-item"  ng-class="{ 'active': $index == selectedIndex }">
+            <li ng-repeat="place in limitedPlaces | filter: filterPlaces" class="list-group-item"  ng-class="{ 'active': $index == selectedIndex }">
                 <place-card ng-model="place" ng-click="selectPlace($index)"></place-card>
             </li>
+            <pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>
         </ul>
 
     </div>
     <div class="col-md-6">
         <div><strong>{{ selectedPlace.name }}</strong></div>
-        <p>{{ selectedPlace.location.address } }</p>
+        <p>{{ selectedPlace.location.address }}</p>
     </div>
 </div>

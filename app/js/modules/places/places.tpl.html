@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div ng-controller="PlacesCtrl">
+    <form>
+        <div class="form-group">
+            <input type="text" ng-model="nearBy" class="form-control" placeholder="Place">
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="query" class="form-control" placeholder="Category">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="search()"> Search</button>
+        </div>
+    </form>
 
-</body>
-</html>
+    <places ng-model="places" ng-if="places.length"></places>
+</div>
