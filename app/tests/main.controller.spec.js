@@ -6,7 +6,8 @@ describe('MainCtrl', function() {
     beforeEach(inject(function($controller, $rootScope, $httpBackend){
         httpBackend = $httpBackend;
         scope = $rootScope.$new();
-        ctrl = $controller('MainCtrl', {$scope: scope});
+        ctrl = $controller('PlacesCtrl', {$scope: scope});
+
         placesData = [
             {name: 'place #1'},
             {name: 'place #2'}
